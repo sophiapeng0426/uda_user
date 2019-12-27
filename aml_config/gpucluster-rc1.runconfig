@@ -1,0 +1,39 @@
+{
+    "script": "text/main.py",
+    "framework": "Python",
+    "communicator": "None",
+    "target": "gpucluster",
+    "environment": {
+        "python": {
+            "userManagedDependencies": false,
+            "condaDependencies": {
+                "dependencies": [
+                    "python=3.6.2",
+                    {
+                        "pip": [
+                            "azureml-defaults",
+                            "tensorflow=1.13.1"
+                        ]
+                    }
+                ]
+            }
+        },
+        "docker": {
+            "baseImage": "mcr.microsoft.com/azureml/base:0.2.4",
+            "enabled": true,
+            "baseImageRegistry": {
+                "address": null,
+                "username": null,
+                "password": null
+            }
+        }
+    },
+    "nodeCount": 1,
+    "history": {
+        "outputCollection": true,
+        "snapshotProject": false,
+        "directoriesToWatch": [
+            "logs"
+        ]
+    }
+}

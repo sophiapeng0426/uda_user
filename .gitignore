@@ -1,0 +1,9 @@
+*.pyc
+*ckpt*
+*__pycache__*
+*.txt
+text/pretrained_models/*
+text/data/IMDB_raw/*
+text/data/proc_data/*
+image/misc/log_for_cifar10_train_200_dev_50/*.txt
+.venv3/*
